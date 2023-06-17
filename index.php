@@ -36,8 +36,11 @@
       <hr>
     </form>
     <?php
-  $user_obj = new User($con, $userLogggedIn);
-  echo $user_obj->getFirstAndLastName();
+    // $user_obj = new User($con, $userLogggedIn);
+    // echo $user_obj->getFirstAndLastName();
+
+    $post = new Post($con, $userLogggedIn);
+    $post->loadPostsFriends();
   ?>
   </div>
 
